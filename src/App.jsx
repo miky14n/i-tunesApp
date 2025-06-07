@@ -32,7 +32,7 @@ function App() {
           ))
         ) : (
           <div className="text-center text-gray-600 py-4">
-            Datos en categoría no registrados.
+            No Data.
           </div>
         )}
 

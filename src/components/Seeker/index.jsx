@@ -25,8 +25,9 @@ export default function Seeker({setData= () => {} }) {
       filterOptions={filterOptions}
       onSelectChange={setFilter}
       onInputChange={setToSerch}
+      personalPlaceHolder="What you want to find?"
     />
-    <PersonalButton action={fetchData} />
+    <PersonalButton action={fetchData} label="Find" />
   </div>
 );
 
