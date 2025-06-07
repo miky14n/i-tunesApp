@@ -15,7 +15,7 @@ export default function Seeker({setData= () => {} }) {
     
     return(
         <>
-        <InputText filterOptions={["All", "Music", "TvShow"]} onSelectChange={setFilter} onInputChange={setToSerch}/>
+        <InputText filterOptions={["All", "song", "TvShow"]} onSelectChange={setFilter} onInputChange={setToSerch}/>
         <PersonalButton action={fetchData}/>
         </>
     );

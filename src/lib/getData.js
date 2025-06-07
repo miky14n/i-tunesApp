@@ -5,6 +5,7 @@ export async function fetchItunesData(search) {
     try {
         const response = await fetch(API_URL + search);
         const result = await response.json();
+        console.log(result, "La rp de api");
         return result["results"];
     } catch (error) {
         console.error("Error al obtener datos:", error);
