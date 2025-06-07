@@ -17,7 +17,7 @@ export function getDataFilter(data, filter) {
   try {
 
     if (filter !== "all") {
-      return data.filter((item) => item.kind === filter);
+      return data.filter((item) => item.wrapperType === filter);
     } else {
       return data;
     }

@@ -12,11 +12,22 @@ export default function Seeker({setData= () => {} }) {
       const data = getDataFilter(response,filter)
       setData(data) 
     };
-    
-    return(
-        <>
-        <InputText filterOptions={["All", "song", "TvShow"]} onSelectChange={setFilter} onInputChange={setToSerch}/>
-        <PersonalButton action={fetchData}/>
-        </>
-    );
+    const filterOptions = {
+      all: "All",
+      track: "Song",
+      audiobook: "Audio Book",
+      movie: "Movie",
+      tvShow: "Tv Show",
+    };
+    return (
+  <div className="grid grid-cols-1 md:grid-cols-[3fr_1fr] gap-4 items-end px-4 py-6 bg-white rounded-xl shadow-sm">
+    <InputText
+      filterOptions={filterOptions}
+      onSelectChange={setFilter}
+      onInputChange={setToSerch}
+    />
+    <PersonalButton action={fetchData} />
+  </div>
+);
+
 }
