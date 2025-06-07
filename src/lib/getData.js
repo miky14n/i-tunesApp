@@ -11,3 +11,18 @@ export async function fetchItunesData(search) {
         return [];
     }
 }
+
+export function getDataFilter(data, filter) {
+  try {
+
+    if (filter !== "all") {
+      return data.filter((item) => item.kind === filter);
+    } else {
+      return data;
+    }
+  } catch (error) {
+    console.error("Error en getDataFilter:", error.message);
+    return []; 
+  }
+}
+

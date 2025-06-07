@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react'
+import {  useState } from 'react'
 import './App.css'
-import { fetchItunesData } from "./lib/getData"
 import Seeker from './components/Seeker'
 
 function App() {
@@ -10,14 +9,14 @@ function App() {
 
   return (
     <>
+     <div>
+      <Seeker setData={setData} />
+     </div>
       <div>
         {data.map((item, index) => (
-          <div key={index}>{item.trackName}</div>
+          <div key={index}>{item.kind}</div>
         ))}
       </div>
-     <div>
-      <Seeker  />
-     </div>
     </>
   )
 }

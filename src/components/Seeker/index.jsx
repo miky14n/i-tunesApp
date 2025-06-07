@@ -1,7 +1,7 @@
 import { useState } from "react";
 import InputText from "../InputText";
 import PersonalButton from "../PersonalButton";
-import { fetchItunesData } from "../../lib/getData";
+import { fetchItunesData, getDataFilter } from "../../lib/getData";
 
 export default function Seeker({setData= () => {} }) {
     const [toSrech,setToSerch]=useState("");
@@ -9,7 +9,8 @@ export default function Seeker({setData= () => {} }) {
     
     const fetchData = async () => {
       const response = await fetchItunesData(toSrech)
-      setData(response.results) 
+      const data = getDataFilter(response,filter)
+      setData(data) 
     };
     
     return(
