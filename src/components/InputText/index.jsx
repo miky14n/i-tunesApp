@@ -1,6 +1,6 @@
 
 export default function InputText({
-  filterOptions,
+  filterOptions=["all"],
   title = "",
   personalPlaceHolder = "put any text here",
   onInputChange = () => {},

@@ -6,13 +6,7 @@ import Seeker from './components/Seeker'
 function App() {
   const [data, setData] = useState([])
   //const filterOptions = ["All", "Music", "TvShow"]
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetchItunesData("one+direction")
-      setData(response.results) 
-    };
-    fetchData()
-  }, []) 
+   
 
   return (
     <>
@@ -22,7 +16,7 @@ function App() {
         ))}
       </div>
      <div>
-      <Seeker filterOptions={["All", "Music", "TvShow"]} />
+      <Seeker  />
      </div>
     </>
   )
